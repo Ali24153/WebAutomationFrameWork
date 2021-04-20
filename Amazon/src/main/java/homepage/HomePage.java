@@ -18,14 +18,17 @@ public class HomePage extends WebAPI {
 
     //second approach using private
     @FindBy(how = How.ID, using = webButtonLocator)public WebElement searchButton;
+    @FindBy(how = How.XPATH, using = verifyTextLocator)public WebElement verifyText;
 
 
     public  void searchBox() throws InterruptedException {
         searchBox.sendKeys(product);
 
-        Thread.sleep(4000);
+        Thread.sleep(2000);
 
         searchButton.click();
+        Thread.sleep(2000);
+        verifyText.getText();
     }
 
     //third approach

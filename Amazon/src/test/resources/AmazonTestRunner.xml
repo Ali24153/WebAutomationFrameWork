@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-
+<!--        cross browsing testing lunch the test cases in two different browser-->
+<!--<suite name="AmazonTestSuit" thread-count="2" parallel="none">-->
 <suite name="AmazonTestSuit">
+
 
 <parameter name="useCloudEnv" value="false"></parameter>
 <parameter name="cloudEnvName" value="browserStack"></parameter>
-    <parameter name="os_version" value="10"></parameter>
 
-    <parameter name="os" value="windows"></parameter>
+    <!--    windows user-->
+    <parameter name="os_version" value="10"/>
+    <parameter name="os" value="windows"/>
+<!--    mac user-->
+<!--    <parameter name="os_version" value="Sierra"/>-->
+<!--    <parameter name="os" value="OS X"/>-->
+
+<!--    browser version-->
 <parameter name="browserName" value="chrome"></parameter>
-<parameter name="browser_version" value="89"></parameter>
+    <parameter name="browser_version" value="89"></parameter>
+<!--<parameter name="browserName" value="firefox"></parameter>-->
+<!--<parameter name="browser_version" value="87.0"></parameter>-->
+
 <parameter name="url" value="https://www.amazon.com/"></parameter>
 
-<test name="Amazon Automation">
+<test name="Amazon Automation using chrome">
+<!--    <parameter name="browserName" value="chrome"></parameter>-->
+<!--    <parameter name="browser_version" value="89"></parameter>-->
     <classes>
 <!--        calling test class-->
         <class name="homepagetest.HomePageTest">
@@ -29,5 +42,25 @@
     </classes>
 </test>
 
+<!--Cross Browser testing -->
+
+
+<!--    <test name="Amazon Automation using edge">-->
+<!--        <parameter name="browserName" value="ie"/>-->
+<!--        <parameter name="browser_version" value="90"/>-->
+<!--        <classes>-->
+<!--            &lt;!&ndash;        calling test class&ndash;&gt;-->
+<!--            <class name="homepagetest.HomePageTest">-->
+
+<!--                &lt;!&ndash;            calling methods&ndash;&gt;-->
+<!--                <methods>-->
+<!--                    &lt;!&ndash;                ignore the method&ndash;&gt;-->
+<!--                    &lt;!&ndash;                <exclude name=""></exclude>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                 include or call the method&ndash;&gt;-->
+<!--                    &lt;!&ndash;                <include name="testloging"></include>&ndash;&gt;-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
 
