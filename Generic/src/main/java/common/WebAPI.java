@@ -483,7 +483,7 @@ public class WebAPI {
     //Taking Screen shots
     public void takeScreenShot() throws IOException {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(file, new File("screenShots.png"));
+        FileUtils.copyFile(file, new File("screenShots.png"));// screenShot.png is a location where we want to store the screen shot inside your project
     }
 
     //Synchronization
