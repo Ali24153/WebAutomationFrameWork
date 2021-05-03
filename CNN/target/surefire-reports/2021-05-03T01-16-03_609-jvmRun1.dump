@@ -1,5 +1,5 @@
-# Created at 2021-04-19T01:36:40.235
-org.apache.maven.surefire.api.testset.TestSetFailedException: Suite file C:\Users\alita\eclipse-workspace\WebAutomationFrameWork\Generic\target\test-classes\AmazonTestRunner.xml is not a valid file
+# Created at 2021-05-03T01:16:30.629
+org.apache.maven.surefire.api.testset.TestSetFailedException: Suite file C:\Users\alita\eclipse-workspace\WebAutomationFrameWork\CNN\target\test-classes\AmazonTestRunner.xml is not a valid file
 	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.locateTestSets(TestNGXmlTestSuite.java:99)
 	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:118)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)

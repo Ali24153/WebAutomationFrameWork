@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.028 s - in TestSuite
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 23.437 s <<< FAILURE! - in TestSuite
+homepagetest.HomePageTest.testSearchBox1  Time elapsed: 6.404 s  <<< FAILURE!
+java.lang.AssertionError: test fail expected ["metro pcs cell phones"] but found ["metro pcs cell phones1"]
+	at homepagetest.HomePageTest.testSearchBox1(HomePageTest.java:49)
+

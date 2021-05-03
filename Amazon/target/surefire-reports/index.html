@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-AmazonTestSuit" class="navigator-link">
-              <span class="suite-name border-passed">AmazonTestSuit</span>
+              <span class="suite-name border-failed">AmazonTestSuit</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-AmazonTestSuit" class="hide-methods failed suite-AmazonTestSuit"> (hide)</a> <!-- hide-methods failed suite-AmazonTestSuit -->
+                      <a href="#" panel-name="suite-AmazonTestSuit" class="show-methods failed suite-AmazonTestSuit"> (show)</a> <!-- show-methods failed suite-AmazonTestSuit -->
+                    </span>
+                    <div class="method-list-content failed suite-AmazonTestSuit">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AmazonTestSuit" title="homepagetest.HomePageTest" class="method navigator-link" hash-for-method="testSearchBox1">testSearchBox1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-AmazonTestSuit -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,6 +131,26 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-AmazonTestSuit" class="panel AmazonTestSuit">
+          <div class="suite-AmazonTestSuit-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">homepagetest.HomePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchBox1">
+                  </a> <!-- testSearchBox1 -->
+                  <span class="method-name">testSearchBox1</span>
+                  <div class="stack-trace">java.lang.AssertionError: test fail expected [&quot;metro pcs cell phones&quot;] but found [&quot;metro pcs cell phones1&quot;]
+	at homepagetest.HomePageTest.testSearchBox1(HomePageTest.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AmazonTestSuit-class-failed -->
           <div class="suite-AmazonTestSuit-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -149,11 +183,11 @@
   &lt;parameter name=&quot;cloudEnvName&quot; value=&quot;browserStack&quot;/&gt;
   &lt;parameter name=&quot;browser_version&quot; value=&quot;89&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;https://www.amazon.com/&quot;/&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Amazon Automation&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Amazon Automation using chrome&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;homepagetest.HomePageTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Amazon Automation --&gt;
+  &lt;/test&gt; &lt;!-- Amazon Automation using chrome --&gt;
 &lt;/suite&gt; &lt;!-- AmazonTestSuit --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -165,7 +199,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Amazon Automation (1 class)</span>
+                <span class="test-name">Amazon Automation using chrome (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -191,16 +225,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testSearchBox')
+data.setCell(0, 1, 'testSearchBox1')
 data.setCell(0, 2, 'homepagetest.HomePageTest')
-data.setCell(0, 3, 6257);
+data.setCell(0, 3, 6432);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testSearchBox')
+data.setCell(1, 2, 'homepagetest.HomePageTest')
+data.setCell(1, 3, 6101);
 window.suiteTableData['AmazonTestSuit']= { tableData: data, tableDiv: 'times-div-AmazonTestSuit'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-AmazonTestSuit">
               </div> <!-- times-div-AmazonTestSuit -->
             </div> <!-- times-div -->
@@ -228,36 +266,62 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">homepagetest.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">extentSetup(org.testng.TestRunner@2d5f7182)</span>
+                <span class="method-name">extentSetup(org.testng.TestRunner@62628e78)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(false, browserStack, windows, 10, chrome, 86, https://www.amazon.com/)</span>
-                <span class="method-start">212 ms</span>
+                <span class="method-name">setUp(false, browserStack, windows, 10, chrome, 89, https://www.amazon.com/)</span>
+                <span class="method-start">179 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">startExtent(public void homepagetest.HomePageTest.testSearchBox() throws java.lang.InterruptedException)</span>
-                <span class="method-start">3597 ms</span>
+                <span class="method-start">5094 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">getInit</span>
-                <span class="method-start">3606 ms</span>
+                <span class="method-start">5103 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testSearchBox</span>
-                <span class="method-start">3658 ms</span>
+                <span class="method-start">5129 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTestMethod([TestResult name=testSearchBox status=SUCCESS method=HomePageTest.testSearchBox()[pri:0, instance:ho...)</span>
-                <span class="method-start">9915 ms</span>
+                <span class="method-start">11232 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">10386 ms</span>
+                <span class="method-start">11454 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserStack, windows, 10, chrome, 89, https://www.amazon.com/)</span>
+                <span class="method-start">11454 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void homepagetest.HomePageTest.testSearchBox1() throws java.lang.InterruptedException)</span>
+                <span class="method-start">16261 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getInit</span>
+                <span class="method-start">16262 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSearchBox1</span>
+                <span class="method-start">16264 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=testSearchBox1 status=FAILURE method=HomePageTest.testSearchBox1()[pri:0, instance:...)</span>
+                <span class="method-start">22696 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">23024 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">generateReport</span>
-                <span class="method-start">10424 ms</span>
+                <span class="method-start">23049 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [AmazonTestSuit]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="useCloudEnv" value="false"/>
+  <parameter name="os" value="windows"/>
+  <parameter name="os_version" value="10"/>
+  <parameter name="browserName" value="chrome"/>
+  <parameter name="cloudEnvName" value="browserStack"/>
+  <parameter name="browser_version" value="89"/>
+  <parameter name="url" value="https://www.amazon.com/"/>
+  <test thread-count="5" name="Amazon Automation using chrome(failed)" verbose="0">
+    <classes>
+      <class name="homepagetest.HomePageTest">
+        <methods>
+          <include name="afterEachTestMethod"/>
+          <include name="setUp"/>
+          <include name="startExtent"/>
+          <include name="getInit"/>
+          <include name="generateReport"/>
+          <include name="cleanUp"/>
+          <include name="testSearchBox1"/>
+          <include name="extentSetup"/>
+        </methods>
+      </class> <!-- homepagetest.HomePageTest -->
+    </classes>
+  </test> <!-- Amazon Automation using chrome(failed) -->
+</suite> <!-- Failed suite [AmazonTestSuit] -->
