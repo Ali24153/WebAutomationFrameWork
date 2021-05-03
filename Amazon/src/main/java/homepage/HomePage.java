@@ -24,10 +24,10 @@ public class HomePage extends WebAPI {
     public  void searchBox() throws InterruptedException {
         searchBox.sendKeys(product);
 
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         searchButton.click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         verifyText.getText();
     }
 
